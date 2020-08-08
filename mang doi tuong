@@ -1,0 +1,23 @@
+setFetchMode(PDO::FETCH_OBJ);
+
+$data = Array{
+	[0]=>stdClass Object{
+		produc_name = "iphone";
+		produc_img = "....";
+	}
+	[1]=>stdClass Object{
+		produc_name = "iphone";
+		produc_img = "....";
+	}
+	[1]=>stdClass Object{
+		produc_name = "iphone";
+		produc_img = "....";
+	}
+}
+
+foreach($data as $rows){
+    echo	$rows->product_name <br>
+}
+
+print_r($a); - su khac biet khi ma 
+	setFetchMode(PDO::FETCH_OBJ)

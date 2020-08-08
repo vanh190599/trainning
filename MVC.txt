@@ -1,0 +1,47 @@
+﻿- model: thao tac voi csdl - dung connection
+- controller: goi model
+- view: hien thi
+
+-> muon goi 1 chuc nang: goi Controller
+
+Controller extends Controller:
+	+ renderHTML: xuat du lieu ra view (goi view va day du lieu theo)
+	vd: $this->renderHTML("views/backend/list_category.php", array("data"=>$data,"numPage"=>$numPage));
+	vd: view: list_category.php
+	 ->data:  $data
+
+
+class routing: dieu huong
+	-> muốn thực hiện chức năng gì thì gọi đến controller đó: (vd: adminController->action: index<show all>)ư
+	backend: Quản trị viên
+	frontend: Khách hàng
+	
+	area: vùng nào
+	controller: file controller nào? - có đường dẫn
+	action: func() nào?
+
+vd: index.php?area=backend&controller=product&action=add
+	+ cách lấy: phương thức GET
+	-> file: productController.php
+	-> class name:  productController
+	-> action(func nao): add()
+	
+*Liên quan chặt chẽ với quy tắc đặt tên:
+	File Controller: tên đối tượng + "Controller" -> 
+		vd: adminController.php
+	Tên class: đặt trùng với tên file
+		vd: class adminController{
+			//code
+		}
+
+	tên đối tượng + "Model" -> file Controller
+
+Routing: Thực hiện hành động gì?
+	- phân tích url-> controller nào? func là gì?
+		trong function: renderHTML: - gọi view
+
+OOP: dung khi nao?
+	::
+	$this->
+	
+
